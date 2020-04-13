@@ -1,14 +1,12 @@
-range1 = 10
+c = 0
 first = 0
 second = 1
- 
-print("\nfibonacci series is:")
-print first
-print second
- 
-for i in range(2, range1):
-    next = first + second
-    print next
- 
-    first = second
-    second = next
+d= 0 
+while c < 4000000:
+	c = first + second
+	first = second
+	second = c
+	if c%2 == 0:
+		d = d + c
+print("The highest fibonacci value under 4million is: " + str(c)) 
+print("The sum of all EVEN fibonacci values under 4million is: " + str(d))
